@@ -11,17 +11,17 @@ const WAConnection = simple.WAConnection(_WAConnection)
 const { banner, start, success } = require('./lib/myfunctions')
 const { color } = require('./lib/color')
 
-require('./itsuki.js')
-nocache('./itsuki.js', module => console.log(`${module} now updated by yourself`))
+require('./index.js')
+nocache('./index.js', module => console.log(`${module} now updated by yourself`))
 
 const starts = async (conn = new WAConnection()) => {
     conn.logger.level = 'warn'
     console.log(banner.string)
     conn.on('qr', () => {
-        console.log(color('[','white'), color('ITSUKI','red'), color(']','white'), color(' Scan qr above'))
+        console.log(color('[','white'), color('Adii','red'), color(']','white'), color(' Scan qr above'))
     })
 
-    fs.existsSync('./itsukisession.json') && conn.loadAuthInfo('./itsukisession.json')
+    fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
     conn.on('connecting', () => {
         start('2', 'Connection lost... mencoba menghubung kembali')
     })
@@ -29,10 +29,10 @@ const starts = async (conn = new WAConnection()) => {
         success('2', 'Connection Opened.')
     })
     await conn.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./itsukisession.json', JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./session.json', JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
 
     conn.on('chat-update', async (message) => {
-        require('./itsuki.js')(conn, message)
+        require('./index.js')(conn, message)
     })
 }
 
