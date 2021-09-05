@@ -11,28 +11,28 @@ const WAConnection = simple.WAConnection(_WAConnection)
 const { banner, start, success } = require('./lib/myfunctions')
 const { color } = require('./lib/color')
 
-require('./index.js')
-nocache('./index.js', module => console.log(`${module} now updated!`))
+require('./itsuki.js')
+nocache('./itsuki.js', module => console.log(`${module} now updated by yourself`))
 
 const starts = async (conn = new WAConnection()) => {
     conn.logger.level = 'warn'
     console.log(banner.string)
     conn.on('qr', () => {
-        console.log(color('[','white'), color('!','red'), color(']','white'), color(' SCAN QR TO CONNECT'))
+        console.log(color('[','white'), color('ITSUKI','red'), color(']','white'), color(' Scan qr above'))
     })
 
-    fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
+    fs.existsSync('./itsukisession.json') && conn.loadAuthInfo('./itsukisession.json')
     conn.on('connecting', () => {
-        start('2', 'menghubungkan...')
+        start('2', 'Connection lost... mencoba menghubung kembali')
     })
     conn.on('open', () => {
-        success('2', 'tersambung kak')
+        success('2', 'Connection Opened.')
     })
     await conn.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./session.json', JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./itsukisession.json', JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
 
     conn.on('chat-update', async (message) => {
-        require('./index.js')(conn, message)
+        require('./itsuki.js')(conn, message)
     })
 }
 
@@ -42,7 +42,7 @@ const starts = async (conn = new WAConnection()) => {
  * @param {function} cb <optional> 
  */
 function nocache(module, cb = () => { }) {
-    console.log('Module', `'${module}'`, 'is now ready to run!')
+    console.log('Module', `'${module}'`, 'is now ready to ngentod')
     fs.watchFile(require.resolve(module), async () => {
         await uncache(require.resolve(module))
         cb(module)
