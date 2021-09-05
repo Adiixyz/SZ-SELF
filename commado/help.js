@@ -27,7 +27,7 @@ Prefix : Multi
 ┃${f}setnama
 ┗❑
 
-┏━━❑ 「 other? 」
+┏━━❑ 「 Other,Grup,Downloader,Maker 」
 ┃
 ┃${f}tomp4
 ┃${f}sherelock
@@ -57,14 +57,14 @@ Prefix : Multi
 ┃${f}lirik
 ┗❑
 
-┏━━❑ 「 Cmd 」
+┏━━❑ 「 Sticker Cmd 」
 ┃
 ┃${f}addcmd
 ┃${f}delcmd
 ┃${f}listcmd
 ┗❑
 
-┏━━❑ 「 idk:v 」
+┏━━❑ 「 Fun 」
 ┃
 ┃${f}readmore
 ┃${f}jadian
