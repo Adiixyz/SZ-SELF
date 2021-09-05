@@ -1,10 +1,13 @@
 const help = (f) => {
-	return `𝙎𝙀𝙇𝙁 𝘽𝙊𝙏
-┏━━⬣ 𝙊𝙒𝙉𝙀𝙍
+	return `「 *SELFBOT WHATSAPP* 」
+
+Prefix : Multi
+
+┏━━❑ 「 Owner 」
 ┃
-┃> [eval]
-┃=> [eval async]
-┃$ [code]
+┃• > [eval]
+┃• => [eval async]
+┃• $ [code]
 ┃${f}term [code]
 ┃${f}upswteks
 ┃${f}upswvideo
@@ -12,8 +15,8 @@ const help = (f) => {
 ┃${f}mode [button]
 ┃${f}setprefix [buttton]
 ┃${f}antiviewonce[button]
-┃${f}setfakeimg [reply]
-┃${f}setthumb [reply]
+┃${f}setfakeimg [reply pic]
+┃${f}setthumb [reply pic]
 ┃${f}bc
 ┃${f}clearall
 ┃${f}setpp
@@ -22,9 +25,9 @@ const help = (f) => {
 ┃${f}get
 ┃${f}sider
 ┃${f}setnama
-┗⬣
+┗❑
 
-┏━━⬣ 𝙊𝙏𝙃𝙀𝙍
+┏━━❑ 「 other? 」
 ┃
 ┃${f}tomp4
 ┃${f}sherelock
@@ -52,16 +55,16 @@ const help = (f) => {
 ┃${f}rulesgroup
 ┃${f}igstory
 ┃${f}lirik
-┗⬣
+┗❑
 
-┏━━⬣ 𝙎𝙏𝘾 𝘾𝙈𝘿
+┏━━❑ 「 Cmd 」
 ┃
 ┃${f}addcmd
 ┃${f}delcmd
 ┃${f}listcmd
-┗⬣
+┗❑
 
-┏━━⬣ 𝙁𝙐𝙉
+┏━━❑ 「 idk:v 」
 ┃
 ┃${f}readmore
 ┃${f}jadian
@@ -78,7 +81,8 @@ const help = (f) => {
 ┃${f}nolep
 ┃${f}jahat
 ┃${f}baik
-┗⬣`
+┗❑
+`
 }
 
 exports.help = help
