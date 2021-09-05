@@ -286,8 +286,8 @@ conn.sendMessage(id, buttonMessage, MessageType.buttonsMessage, options)
 
 
 switch(command || commando) {
-case'scccc':
-conn.sendMessage(from, 'github.com/adulalhy/SZ-SELF' ,text,{quoted :mek})
+case'sc':
+conn.sendMessage(from, 'Nih Sc\n\nDari : https://github.com/adulalhy/SZ-SELF/\nRecoded (oleh saya) : https://github.com/Adiixyz/newselfbotz' ,text,{quoted :mek})
 break
 }
 
@@ -310,7 +310,7 @@ if (!mek.key.fromMe) return
 if (budy.startsWith('$')){
 qur = budy.slice(2)
 exec(qur, (err, stdout) => {
-if (err) return reply(`SZ-SELF:~ ${err}`)
+if (err) return reply(`root@Selfbot:~ ${err}`)
 if (stdout) {
 reply(stdout)
 }
@@ -340,7 +340,7 @@ reply(String(e))
 //************************[COMMADO]************************\\
 switch(command || commando) {
 case'help': case'menu':
-conn.sendMessage(from, help(f), text, {quoted: freply})
+conn.sendMessage(from, help(f), text, {quoted: fkontak})
 break
 
 case 'runtime':
@@ -368,14 +368,14 @@ from,
  {
 buttonId: `group open`,
 buttonText: {
-displayText: `open`,
+displayText: `Open`,
 },
 type: 1,
 },
 {
 buttonId: `group close`,
 buttonText: {
-displayText: `close`,
+displayText: `Close`,
 },
 type: 1,
 },
@@ -468,20 +468,20 @@ imgreply(`Berhasil mengubah prefix ke ${fg}`)
 } else if (!fg) {
 sendButMessage(
 from,
-`MODE SET PREFIX!`,
+`SET PREFIX!`,
 `Silahkan pilih salah satu`,
  [
  {
 buttonId: `setprefix multi`,
 buttonText: {
-displayText: `multi`,
+displayText: `Multi`,
 },
 type: 1,
 },
 {
 buttonId: `setprefix nopref`,
 buttonText: {
-displayText: `no prefix`,
+displayText: `No prefix`,
 },
 type: 1,
 },
@@ -523,7 +523,7 @@ if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 buff = await client.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-conn.sendMessage(_.jid, buff, image, {caption: `[ Ini Broadcast ]\n\n${body.slice(4)}`})
+conn.sendMessage(_.jid, buff, image, {caption: `[ Ini Broadcast Banh ]\n\n${body.slice(4)}`})
 }
 reply('Suksess broadcast')
 } else {
@@ -598,7 +598,7 @@ break
 case 'term':
 if (!q) return
 exec(q, (err, stdout) => {
-if (err) return imgreply(`SELF-BOT:~ ${err}`)
+if (err) return imgreply(`root@Selfbot:~ ${err}`)
 if (stdout) {
 imgreply(stdout)
 }
@@ -941,7 +941,7 @@ case 'rulesgroup':
 ccu =`*Description group!*
 
 ${groupDesc}`
-conn.sendMessage(from, ccu, text, {quoted:mek})
+conn.sendMessage(from, ccu, text, {quoted:fkontak})
 break
 
 case 'readmore':
